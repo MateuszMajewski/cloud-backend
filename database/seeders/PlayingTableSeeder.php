@@ -12,7 +12,7 @@ class PlayingTableSeeder extends Seeder {
     {
         DB::table('playing')->delete();
 
-        if (($handle = fopen(dirname(__FILE__, 3)."\\CollegePlaying.csv", "r")) !== FALSE) {
+        if (($handle = fopen(dirname(__FILE__, 3)."/CollegePlaying.csv", "r")) !== FALSE) {
           fgets($handle);
           while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
             try {
